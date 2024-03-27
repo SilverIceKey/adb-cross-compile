@@ -19,6 +19,7 @@
 #include <unistd.h>
 #include <string.h>
 
+#include <sys/sysmacros.h>
 #include <sys/ioctl.h>
 #include <sys/types.h>
 #include <sys/time.h>
