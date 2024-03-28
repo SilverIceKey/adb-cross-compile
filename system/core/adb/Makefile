@@ -81,6 +81,9 @@ all: adb
  
 adb: $(OBJS)
 	$(LD) -o $@ $(LDFLAGS) $(OBJS) $(LIBS)
+	
+install:
+	cp $(PWD)/adb /usr/bin/
  
 clean:
 	rm -rf $(OBJS)
