@@ -61,15 +61,7 @@ CFLAGS+= -O2 -g -Wall -Wno-unused-parameter
 
 LIBS= -lcrypto -lpthread -lrt 
 
-
- 
-#TOOLCHAIN= /opt/poky/1.5/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-
-
 TOOLCHAIN= 
-
-#TOOLCHAIN= /opt/freescale/usr/local/gcc-4.4.4-glibc-2.11.1-multilib-1.0/arm-fsl-linux-gnueabi/bin/arm-none-linux-gnueabi-
-
-#TOOLCHAIN= arm-linux-gnueabi-
 
 CC= $(TOOLCHAIN)gcc
 CXX= $(TOOLCHAIN)g++
