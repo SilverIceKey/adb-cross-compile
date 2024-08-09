@@ -21,6 +21,10 @@ jobs:
             arch: loongarch64  # 排除不支持的组合
 
     steps:
+    
+    - name: Configure Git to handle long paths
+      run: git config --global core.longpaths true
+
     - name: Checkout code
       uses: actions/checkout@v3
 
