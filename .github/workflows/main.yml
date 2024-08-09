@@ -2,8 +2,11 @@ name: Cross Compile and Release
 
 on:
   push:
-    tags:
-      - '*'  # 当推送任何 tag 时触发
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
   workflow_dispatch:  # 允许手动触发
 
 jobs:
@@ -23,7 +26,7 @@ jobs:
     steps:
     
     - name: Configure Git to handle long paths
-      run: git config --system core.longpaths true
+      run: git config --global core.longpaths true
 
     - name: Checkout code
       uses: actions/checkout@v3
