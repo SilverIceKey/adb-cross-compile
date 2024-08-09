@@ -15,13 +15,8 @@ jobs:
 
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]  # 操作系统
-        arch: [x86_64, aarch64, loongarch64]  # 架构
-        exclude:
-          - os: windows-latest
-            arch: loongarch64
-          - os: macos-latest
-            arch: loongarch64  # 排除不支持的组合
+        os: [ubuntu-latest, windows-latest]  # 操作系统
+        arch: [x86_64, aarch64]  # 架构
 
     steps:
     
