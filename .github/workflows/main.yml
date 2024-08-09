@@ -28,13 +28,14 @@ jobs:
     - name: Configure Git to handle long paths
       run: git config --global core.longpaths true
       
-    - name: Configure Git symlinks in repository
-      run: git config core.symlinks false
-      working-directory: ./  # 确保在 Git 仓库目录内执行
       
     - name: Checkout code
       uses: actions/checkout@v3
 
+    - name: Configure Git symlinks in repository
+      run: git config core.symlinks false
+      working-directory: ./  # 确保在 Git 仓库目录内执行
+      
     - name: Read Version from Version.txt
       id: get_version
       run: |
