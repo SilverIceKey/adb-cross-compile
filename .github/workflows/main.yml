@@ -28,6 +28,9 @@ jobs:
     - name: Configure Git to handle long paths
       run: git config --global core.longpaths true
       
+    - name: Configure Git symlinks in repository
+      run: git config --global core.symlinks false
+      
     - name: Checkout code
       uses: actions/checkout@v4
       
