@@ -37,7 +37,7 @@ jobs:
     - name: Read Version from Version.txt
       id: get_version
       run: |
-        VERSION=$(cat Version.txt)
+        VERSION=$(cat version.txt)
         echo "VERSION=$VERSION" >> $GITHUB_ENV
 
     - name: Setup cross-compilation tools (Linux)
