@@ -15,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest]  # 操作系统
+        os: [ubuntu-latest]  # 操作系统
         arch: [x86_64, aarch64]  # 架构
 
     steps:
